@@ -28,7 +28,7 @@ jobs:
         with:
           cosign-release: 'v1.9.0'
       - name: Log into registry ${{ env.REGISTRY }}
-        uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
+        uses: docker/login-action@be010b42938448d8a286c21d5c4ccf2aae1524a1
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
