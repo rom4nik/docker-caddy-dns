@@ -24,23 +24,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Install cosign
-        uses: sigstore/cosign-installer@7cc35d7fdbe70d4278a0c96779081e6fac665f88
+        uses: sigstore/cosign-installer@v2
         with:
           cosign-release: 'v1.9.0'
       - name: Log into registry ${{ env.REGISTRY }}
-        uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+        uses: docker/login-action@v2
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Extract Docker metadata
         id: meta
-        uses: docker/metadata-action@210d783f42dfbd5492271c72e5f4232408f1d169
+        uses: docker/metadata-action@v4
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
       - name: Build and push Docker image
         id: build-and-push
-        uses: docker/build-push-action@48888e0b1305dca3a741ceb3b5a04ea336cd2626
+        uses: docker/build-push-action@v3
         with:
           context: .
           push: true
