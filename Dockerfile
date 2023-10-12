@@ -3,5 +3,5 @@ RUN xcaddy build \
 	--with github.com/caddy-dns/cloudflare \
 	--with github.com/caddy-dns/ovh
 
-FROM docker.io/library/caddy:2.7.5-alpine@sha256:b6f72113f4565450be796b727c971cd9a863f06af987c6521fbe403028de93da
+FROM docker.io/library/caddy:2.7.5-alpine@sha256:a6da3a5344175003538ac1cf4ec8a79ef48d525c0841e9cc81a5c0112d52c982
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
