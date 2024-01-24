@@ -1,4 +1,4 @@
-FROM docker.io/library/caddy:2.7.6-builder-alpine@sha256:7523c3640b0ca1124b94e71ffae7b2c09dfa9b0353c3cea4db37fe59bb20911b AS builder
+FROM docker.io/library/caddy:2.7.6-builder-alpine@sha256:6830ac674c20121639507269dc8c2fe4283de1be46818111db409812d10d5de1 AS builder
 RUN xcaddy build \
 	--with github.com/caddy-dns/cloudflare \
 	--with github.com/caddy-dns/ovh
