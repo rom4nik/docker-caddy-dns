@@ -1,5 +1,11 @@
 # docker-caddy-dns
 
+## Deprecation notice
+
+This repo will be removed soon. Feel free to fork it if you want to use your own semi-automatic Caddy rebuilds.
+
+## Original README
+
 Docker image containing [Caddy reverse proxy](https://caddyserver.com/) built with addition of [Cloudflare](https://github.com/caddy-dns/cloudflare) and [OVH](https://github.com/caddy-dns/ovh) DNS provider modules.
 
 Renovate and GitHub Actions are used to ensure quick updates when upstream releases a new version.
